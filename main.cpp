@@ -19,7 +19,7 @@ int read_data(std::string filesname) {
         }
         //infile.close();
     } else {
-        //std::cerr << "Unable to open file for reading" << std::endl; Error if non-file
+        //std::cerr << "Unable to open file for reading" << std::endl; Error if non-fill
         std::fstream file;
         file.open("test.txt", std::ios::out);
         file << "test data";
