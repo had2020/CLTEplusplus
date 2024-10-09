@@ -7,15 +7,15 @@ Creative Commons, CLTEplusplus, By Hadrian Lazic, 10/9/24
 #include <iostream>
 #include <fstream>
 
-int create_file(std::string filesname) {
-}
-
 int read_data(std::string filesname) {
     std::ifstream infile(filesname);
     if (infile.is_open()) {
         std::string line;
         while (std::getline(infile, line)) {
-            std::cout << line << std::endl;
+            //std::cout << line << std::endl;
+            std::cout << line;
+            std::string test;
+            std::cin >> test;
         }
         //infile.close();
     } else {
