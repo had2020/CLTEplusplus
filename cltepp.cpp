@@ -22,6 +22,9 @@ int main(int argc, char** argv) {
     std::fstream file; // fstream file object
     file.open(filename, std::ios::in | std::ios::out); // fstream open file object
 
+    std::string current_data; 
+    std::string current_line;
+
     // Read from the file:
     std::string line;
     while (std::getline(file, line)) {
@@ -40,8 +43,8 @@ int main(int argc, char** argv) {
     //file << "Hello, world!" << std::endl; fails ?
 
     std::string text; // declartion 
-    std::cin >> text; // input
-    outputFile << text + line << std::endl; // output to file // TODO keep old data
+    std::getline(std::cin, text); // input, allows for space in input
+    outputFile << text << std::endl; // output to file // TODO keep old data // TODO add quit function 
 
     file.close();
 }
