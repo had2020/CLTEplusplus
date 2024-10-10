@@ -28,7 +28,7 @@ int read_data(std::string filesname) {
 
     return 0;
 }
-
+/*
 int write_data(std::string filesname) {
     std::ofstream outfile("data.txt");
     if (outfile.is_open()) {
@@ -41,6 +41,7 @@ int write_data(std::string filesname) {
 
     return 0;
 }
+*/
 
 int main() {
     std::string name; 
