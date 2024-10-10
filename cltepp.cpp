@@ -3,7 +3,8 @@
 #include <string>
 //#include <vector>
 
-// export g++ -o cltepp cltepp.cpp
+// export native: g++ -o cltepp cltepp.cpp
+// export for exe: x86_64-w64-mingw32-g++ -o cltepp.exe cltepp.cpp
 
 // argc is number of arguments
 // argc is number of args, argv is array of args
