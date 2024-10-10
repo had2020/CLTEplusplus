@@ -5,11 +5,11 @@
 
 // export g++ -o cltepp cltepp.cpp
 
-// argc is number of arguments 
+// argc is number of arguments
 // argc is number of args, argv is array of args
 int main(int argc, char** argv) {
 
-    std::cout << "Cltepp, By Hadrian Lazic" << std::endl;
+    std::cout << "#### Cltepp, By Hadrian Lazic ####" << std::endl;
 
     if (argc < 2) {
         std::cerr << "Error, Missing argv" << std::endl;
@@ -22,14 +22,14 @@ int main(int argc, char** argv) {
     std::fstream file; // fstream file object
     file.open(filename, std::ios::in | std::ios::out); // fstream open file object
 
-    std::string current_data; 
-    std::string current_line;
+    std::string current_data;
 
     // Read from the file:
     std::string line;
     while (std::getline(file, line)) {
-        std::cout << line << std::endl;
-        // Process the line
+        std::cout << line << std::endl; // displays line for i
+        current_data = current_data + "\n" + line;
+        // Process lines
     }
 
     if (!file.is_open()) {
@@ -42,9 +42,10 @@ int main(int argc, char** argv) {
 
     //file << "Hello, world!" << std::endl; fails ?
 
-    std::string text; // declartion 
-    std::getline(std::cin, text); // input, allows for space in input
-    outputFile << text << std::endl; // output to file // TODO keep old data // TODO add quit function 
+    //std::string line_int = "\n"; // predeclared with \n, for next line
+    std::string changed_text;
+    std::getline(std::cin, changed_text); // input, allows for space in input
+    outputFile << current_data + "\n" + changed_text;// output to file TODO add quit function
 
-    file.close();
+    file.close(); // TODO close after reading so that work is not removeed if writing and then quit
 }
