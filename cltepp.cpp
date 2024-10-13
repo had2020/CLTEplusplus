@@ -4,7 +4,7 @@
 #include <ncurses.h>
 
 // EXPORTING
-// export native: g++ -o cltepp cltepp.cpp
+// export native: g++ -lncurses -o cltepp cltepp.cpp
 // export for exe: x86_64-w64-mingw32-g++ -o cltepp.exe cltepp.cpp
 
 void save_changes(std::string current_text1[], int size) {
