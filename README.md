@@ -12,7 +12,7 @@
   with C++, so what better way to pratice low level, then to make a
   Command Line Text Editor.
 
-  Feel free to fork the code leave a star if you wish.
+  Feel free to fork the code, leave a star if you wish.
 
 # Code Breakdown
 This C++ code is a simple text editor built for the command line using the ncurses library for managing text-based UI. Here's a brief breakdown of how it works:
