@@ -19,7 +19,6 @@ This C++ code is a simple text editor built for the command line using the ncurs
 
 1. Compiling the Code
 You can compile the code in two ways, depending on your platform:
-
 For a native build (Linux/Unix):
 bash
 Copy code
@@ -28,20 +27,23 @@ For Windows (using Mingw32):
 bash
 Copy code
 x86_64-w64-mingw32-g++ -o cltepp.exe cltepp.cpp
+
 2. Main Features
 File input and output: The editor loads a file provided as an argument and displays its contents. Changes made are saved to the file after each modification.
 Text navigation: You can navigate up and down the text with the arrow keys (KEY_UP, KEY_DOWN), and edit the text.
 Real-time text display: The content is continuously refreshed and redrawn as you navigate or modify the file.
 Cursor control: The editor moves the cursor up, down, left, and right with the arrow keys.
 Save changes: As you make changes to the text, they are automatically saved to the file.
-3. Functions Overview
+
+4. Functions Overview
 save_changes(std::string current_text[], int size)
 Purpose: Saves the current state of the text to a file called data.txt.
 Operation: Loops through the array of strings (current_text[]) and writes each line to the file.
 draw_text(int current_row, int total_lines, std::string current_text[])
 Purpose: Draws the text onto the screen starting from the current row.
 Operation: Clears the screen and prints lines of text within the terminal window's dimensions. It moves the cursor row-by-row while printing lines from current_text[].
-4. Main Program Flow
+
+6. Main Program Flow
 Argument Parsing: The program expects a filename as the first argument. If none is provided, it throws an error and terminates.
 
 File Processing: Opens the specified file, counts the total number of lines, and stores them in the current_text[] array.
